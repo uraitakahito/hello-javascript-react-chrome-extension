@@ -11,10 +11,17 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        service_worker: resolve(__dirname, 'src/service_worker.js'),
       },
       output: {
         // https://rollupjs.org/configuration-options/#output-entryfilenames
-        entryFileNames: 'assets/[name].js',
+        entryFileNames: ({ name }) => {
+          const specialEntries = ['service_worker'];
+          if (specialEntries.includes(name)) {
+            return '[name].js';
+          }
+          return 'assets/[name].js';
+        },
         chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },

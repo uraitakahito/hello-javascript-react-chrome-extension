@@ -2,5 +2,8 @@
   "manifest_version": 3,
   "name": "hello javascript react chrome extension",
   "version": "1.0.0",
-  "description": "A basic example extension"
+  "description": "A basic example extension",
+  "background": {
+    "service_worker": "service_worker.js"
+  }
 }

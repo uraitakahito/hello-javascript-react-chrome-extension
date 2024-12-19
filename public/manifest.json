@@ -5,5 +5,9 @@
   "description": "A basic example extension",
   "background": {
     "service_worker": "service_worker.js"
-  }
+  },
+  "side_panel": {
+    "default_path": "src/sidepanel/sidepanel.html"
+  },
+  "permissions": ["sidePanel"]
 }

@@ -13,6 +13,8 @@ module.exports = {
     browser: true,
     es2024: true,
     node: true,
+    // https://github.com/sindresorhus/globals/blob/48c7b51a8fb284142f88fe34ada7558c0531c44f/globals.json#L2677-L2681
+    webextensions: true,
   },
 
   /*

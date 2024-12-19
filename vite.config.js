@@ -1,3 +1,6 @@
+// Vitest supports the same extensions for your configuration file as Vite does:
+// .js, .mjs, .cjs, .ts, .cts, .mts.
+
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
